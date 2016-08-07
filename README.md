@@ -14,3 +14,6 @@ TV Series php website using themoviedb.org API as landing page for ad-center.com
   * Upload to webhost root directory
   * Edit config.php as you need
   
+### License
+See the [LICENSE](LICENSE.md) file for license rights and limitations (MIT).
+  
