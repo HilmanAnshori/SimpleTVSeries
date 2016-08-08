@@ -9,6 +9,7 @@ TV Series php website using themoviedb.org API as landing page for ad-center.com
   * Using file cache
   * Using fancybox
   * Multiple Themoviedb.org API keys
+  * Automatic google sitemap 
   
 ### Installation
   * Upload to webhost root directory
