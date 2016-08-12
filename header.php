@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  	<base href="<?php echo "http://".$_SERVER['SERVER_NAME'].'/';?>" />
+  	<base href="<?php echo 'http://'.$_SERVER['SERVER_NAME'].'/'; ?>" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <?php echo get_header();?>
+    <?php echo get_header(); ?>
     <!--[if lte IE 8]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -44,13 +44,19 @@
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-              <li<?php if(is_popular()) echo ' class="active"';?>>
+              <li<?php if (is_popular()) {
+    echo ' class="active"';
+} ?>>
                 <a href="popular">Popular</a>
               </li> 
-              <li<?php if(is_ontheair()) echo ' class="active"';?>>
+              <li<?php if (is_ontheair()) {
+    echo ' class="active"';
+} ?>>
                 <a href="on-the-air">On The Air</a>
               </li> 
-              <li<?php if(is_airingtoday()) echo ' class="active"';?>>
+              <li<?php if (is_airingtoday()) {
+    echo ' class="active"';
+} ?>>
                 <a href="airing-today">Airing Today</a>
               </li> 
               <li><a href="/search/series">Search</a></li>

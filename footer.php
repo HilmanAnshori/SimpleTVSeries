@@ -11,22 +11,22 @@
 				    </ul>
 			  	</div>
 				<div class="col-sm-4 col-xs-12">
-					<div class="fa-hover pull-right"><a href="<?php echo $curpage;?>#top">Back to top <span class="fa fa-angle-double-up"></span></a></div>
+					<div class="fa-hover pull-right"><a href="<?php echo $curpage; ?>#top">Back to top <span class="fa fa-angle-double-up"></span></a></div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-12">
-					<p>Copyright <i class="fa fa-copyright"></i> 2015 <a title="<?php echo $config->sitename;?>" href=""><?php echo $config->sitename . ' - ' . str_replace('www.','',parse_url($curpage, PHP_URL_HOST));?></a>. All Rights Reserved.</p>
+					<p>Copyright <i class="fa fa-copyright"></i> 2015 <a title="<?php echo $config->sitename; ?>" href=""><?php echo $config->sitename.' - '.str_replace('www.', '', parse_url($curpage, PHP_URL_HOST)); ?></a>. All Rights Reserved.</p>
 				</div>
 				<div class="col-lg-12 mtop text-center small">
 					<?php
-					$time = microtime();
-					$time = explode(' ', $time);
-					$time = $time[1] + $time[0];
-					$finish = $time;
-					$total_time = round(($finish - $start), 4);
-					echo 'Page generated in '.$total_time.' seconds.';
-					?>
+                    $time = microtime();
+                    $time = explode(' ', $time);
+                    $time = $time[1] + $time[0];
+                    $finish = $time;
+                    $total_time = round(($finish - $start), 4);
+                    echo 'Page generated in '.$total_time.' seconds.';
+                    ?>
 				</div>
 			</div>
 		</div>

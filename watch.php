@@ -17,6 +17,6 @@
 
 <script type="text/javascript"> 
 	setTimeout(function(){
-       window.location='<?php echo $url;?>';
+       window.location='<?php echo $url; ?>';
     }, 3000);
 </script>
