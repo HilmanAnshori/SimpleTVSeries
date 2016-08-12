@@ -27,17 +27,17 @@
   </fieldset>
 </form>
 <?php 
-	if(isset($_POST["name"])){
-		$to      = 'info@'.str_replace('www.','',parse_url($curpage, PHP_URL_HOST));
-		$subject = str_replace('www.','',parse_url($curpage, PHP_URL_HOST)). ' Contact Us';
-		$message = $_POST["name"].PHP_EOL.$_POST["message"];
-		$headers = 'From: '.$_POST["email"] . "\r\n" .
-		    'Reply-To: '.$_POST["email"] . "\r\n" .
-		    'X-Mailer: PHP/' . phpversion();
+    if (isset($_POST['name'])) {
+        $to = 'info@'.str_replace('www.', '', parse_url($curpage, PHP_URL_HOST));
+        $subject = str_replace('www.', '', parse_url($curpage, PHP_URL_HOST)).' Contact Us';
+        $message = $_POST['name'].PHP_EOL.$_POST['message'];
+        $headers = 'From: '.$_POST['email']."\r\n".
+            'Reply-To: '.$_POST['email']."\r\n".
+            'X-Mailer: PHP/'.phpversion();
 
-		mail($to, $subject, $message, $headers);
-		echo '<span class="text-center">Your message has been sent, thank you.</span>';
-	} 
+        mail($to, $subject, $message, $headers);
+        echo '<span class="text-center">Your message has been sent, thank you.</span>';
+    }
 ?>
 </div>
 

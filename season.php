@@ -7,8 +7,8 @@
 			<div id="player-mask">
 				<div id="player" class="mauto">
 					<div class="player-wrap">
-						<img class="fit" src="<?php echo $title->backdrop_link;?>" alt="<?php echo $title->name;?>">
-						<div class="watermark"><div class="host"><?php echo str_replace('www.','',parse_url($curpage, PHP_URL_HOST));?></div></div>
+						<img class="fit" src="<?php echo $title->backdrop_link; ?>" alt="<?php echo $title->name; ?>">
+						<div class="watermark"><div class="host"><?php echo str_replace('www.', '', parse_url($curpage, PHP_URL_HOST)); ?></div></div>
 						<a class="inline play cboxElement" href="#login" onclick="return loaded;" onclick="return loaded;"></a>
 						<div id="controls">
 							<div class="control-wrap">
@@ -18,7 +18,7 @@
 									<div id="ivol" class="text-left"></div>
 								</div>
 								<div class="ctime">
-									<span class="cmin" title="0">00:00:00</span> / <span class="cmax"><?php if ($title->episode_run_time[0]):$rtime = $title->episode_run_time[0]*60; echo gmdate("H:i:s", $rtime); else: echo '00:43:63'; endif;?></span>
+									<span class="cmin" title="0">00:00:00</span> / <span class="cmax"><?php if ($title->episode_run_time[0]):$rtime = $title->episode_run_time[0] * 60; echo gmdate('H:i:s', $rtime); else: echo '00:43:63'; endif; ?></span>
 								</div>
 								<div class="cfull"></div>
 								<a class="inline cboxElement" href="#login" onclick="return loaded;"><div class="cset"><span class="chade"></span></div></a>
@@ -38,7 +38,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-lg-12 text-center">
-			<h2 class="nomargin"><?php echo $title->name;?> <?php echo $seasondata->name;?></h2>
+			<h2 class="nomargin"><?php echo $title->name; ?> <?php echo $seasondata->name; ?></h2>
 		</div>
 	</div>
 </div>
@@ -47,50 +47,50 @@
 <div class="container">
 	<div class="row mtop mbottom small">
 		<div class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
-			<img class="img-thumbnail fit" alt="<?php echo $title->name;?>" src="<?php echo $title->poster_link;?>" />
+			<img class="img-thumbnail fit" alt="<?php echo $title->name; ?>" src="<?php echo $title->poster_link; ?>" />
 		</div>
 		<div class="col-lg-10 col-md-9 col-sm-8 col-xs-12">
 			<div class="row">
-				<?php if($seasondata->air_date):?>
+				<?php if ($seasondata->air_date):?>
 					<div class="col-lg-2 col-md-3 col-sm-4 col-xs-4">
 						<strong>Air Date</strong><span class="text-right fright">:</span>
 					</div>	
 					<div class="col-lg-10 col-md-9 col-sm-8 col-xs-8 nopaddingleft">
-						<?php echo $seasondata->air_date;?>
+						<?php echo $seasondata->air_date; ?>
 					</div>
-				<?php endif;?>
-				<?php if($seasondata->season_number):?>
+				<?php endif; ?>
+				<?php if ($seasondata->season_number):?>
 					<div class="col-lg-2 col-md-3 col-sm-4 col-xs-4">
 						<strong>Season Number</strong><span class="text-right fright">:</span>
 					</div>	
 					<div class="col-lg-10 col-md-9 col-sm-8 col-xs-8 nopaddingleft">
-						<?php echo $seasondata->season_number;?>
+						<?php echo $seasondata->season_number; ?>
 					</div>
-				<?php endif;?>
-				<?php if($title->gnr):?>
+				<?php endif; ?>
+				<?php if ($title->gnr):?>
 					<div class="col-lg-2 col-md-3 col-sm-4 col-xs-4">
 						<strong>Genres</strong><span class="text-right fright">:</span>
 					</div>	
 					<div class="col-lg-10 col-md-9 col-sm-8 col-xs-8 nopaddingleft">
-						<?php echo $title->gnr;?>
+						<?php echo $title->gnr; ?>
 					</div>
-				<?php endif;?>
-				<?php if($title->overview):?>
+				<?php endif; ?>
+				<?php if ($title->overview):?>
 					<div class="col-lg-2 col-md-3 col-sm-4 col-xs-4">
 						<strong>Storyline</strong><span class="text-right fright">:</span>
 					</div>	
 					<div class="col-lg-10 col-md-9 col-sm-8 col-xs-8 nopaddingleft">
-						<?php echo nl2br($title->overview);?>
+						<?php echo nl2br($title->overview); ?>
 					</div>
-				<?php endif;?>
-				<?php if($seasondata->cst):?>
+				<?php endif; ?>
+				<?php if ($seasondata->cst):?>
 					<div class="col-lg-2 col-md-3 col-sm-4 col-xs-4">
 						<strong>Casts</strong><span class="text-right fright">:</span>
 					</div>	
 					<div class="col-lg-10 col-md-9 col-sm-8 col-xs-8 nopaddingleft">
-						<?php echo $seasondata->cst;?>
+						<?php echo $seasondata->cst; ?>
 					</div>
-				<?php endif;?>
+				<?php endif; ?>
 			</div>
 		</div>
 	</div>
@@ -101,7 +101,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-lg-12 text-center">
-			<h3 class="nomargin"><?php echo $title->name;?> <?php echo $seasondata->name;?> Episode List</h3>
+			<h3 class="nomargin"><?php echo $title->name; ?> <?php echo $seasondata->name; ?> Episode List</h3>
 		</div>
 	</div>
 </div>
@@ -109,28 +109,28 @@
 <!-- episode list start -->
 <div class="container">
 	<div class="row ptop">
-		<?php if($seasondata->episodes):?>
+		<?php if ($seasondata->episodes):?>
 			<div class="row mbottom">
-				<?php foreach($seasondata->episodes as $episode):?>
+				<?php foreach ($seasondata->episodes as $episode):?>
 					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 						<div class="row mbottom">
 							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-								<a title="<?php echo $title->name;?> <?php echo $seasondata->name;?> Episode <?php echo $episode->episode_number;?>" href="<?php echo $episode->link;?>"><img class="img-episode img-thumbnail fit" alt="<?php echo $episode->name;?> thumbnail image" src="<?php echo $episode->still_link;?>" /></a>
+								<a title="<?php echo $title->name; ?> <?php echo $seasondata->name; ?> Episode <?php echo $episode->episode_number; ?>" href="<?php echo $episode->link; ?>"><img class="img-episode img-thumbnail fit" alt="<?php echo $episode->name; ?> thumbnail image" src="<?php echo $episode->still_link; ?>" /></a>
 							</div>
 							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-								<a class="small" title="<?php echo $title->name;?> <?php echo $seasondata->name;?> Episode <?php echo $episode->episode_number;?>" href="<?php echo $episode->link;?>">Episode <?php echo $episode->episode_number;?> : <?php echo $episode->name;?></a><br />
+								<a class="small" title="<?php echo $title->name; ?> <?php echo $seasondata->name; ?> Episode <?php echo $episode->episode_number; ?>" href="<?php echo $episode->link; ?>">Episode <?php echo $episode->episode_number; ?> : <?php echo $episode->name; ?></a><br />
 								<span class="small">
-									<?php echo substr($episode->overview, 0,100);?> ...
+									<?php echo substr($episode->overview, 0, 100); ?> ...
 								</span><br />
-								<?php if($episode->adate):?>
-									<span class="small"><?php echo $episode->adate;?></span>
-								<?php endif;?>
+								<?php if ($episode->adate):?>
+									<span class="small"><?php echo $episode->adate; ?></span>
+								<?php endif; ?>
 							</div>
 						</div>
 					</div>
-				<?php endforeach;?>
+				<?php endforeach; ?>
 			</div>
-		<?php endif;?>
+		<?php endif; ?>
 	</div>
 </div>
 <!-- episode list end -->
@@ -154,8 +154,8 @@
 					</div>
 					<div class="noaccount">
 						<div class="form-title">Don't have account?</div>
-						<div class="noaccount-wrap small">Spend a little time now for free register and you could benefit later. You will be able to Stream and Download "<?php echo $title->name;?>" in High-Definition on PC (desktop, laptop, tablet, handheld pc etc.) and Mac. Download as many as you like and watch them on your computer, your tablet, TV or mobile device.</div>
-						<div class="reg-wrap"><a class="btn btn-block btn-info" href="<?php echo $seasondata->adcenter_link;?>">Register FREE Account</a></div>
+						<div class="noaccount-wrap small">Spend a little time now for free register and you could benefit later. You will be able to Stream and Download "<?php echo $title->name; ?>" in High-Definition on PC (desktop, laptop, tablet, handheld pc etc.) and Mac. Download as many as you like and watch them on your computer, your tablet, TV or mobile device.</div>
+						<div class="reg-wrap"><a class="btn btn-block btn-info" href="<?php echo $seasondata->adcenter_link; ?>">Register FREE Account</a></div>
 					</div>
 				</div>
 				<div class="register">
@@ -169,7 +169,7 @@
 						<li>Guaranteed to save time and money - Its quick and hassle free, forget going to the post office.</li>
 						<li>It works on your TV, PC or MAC!</li>
 					</ul>
-                                <div class="reg-wrap"><a class="btn btn-block btn-info" href="<?php echo $seasondata->adcenter_link;?>">Register FREE Account</a></div>
+                                <div class="reg-wrap"><a class="btn btn-block btn-info" href="<?php echo $seasondata->adcenter_link; ?>">Register FREE Account</a></div>
                 </div>
                 <div class="clear-float"></div>
         </div>
